@@ -10,4 +10,4 @@
 | 브랜치명 | 설명 |
 |--------|-----|
 | master | 메인 브랜치 |
-| bot-developer | 봇 개발자 직군 |
+| [bot-developer](https://github.com/koreanbots/interview-task/tree/bot-developer) | 봇 개발자 직군 |
