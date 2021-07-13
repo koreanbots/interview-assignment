@@ -12,7 +12,7 @@ class Example(commands.Cog):
     def __init__(self, bot: "Bot"):
         self.bot = bot
 
-    @commands.command(name="ping")
+    @commands.command()
     async def ping(self, ctx: commands.Context):
         await ctx.send("pong")
 
