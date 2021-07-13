@@ -12,9 +12,10 @@ class Bot(commands.Bot):
     async def on_ready(self):
         print(f"Logged in as {self.user.name}")
 
-    async def on_command_error(self, ctx, exception):
+    async def on_command_error(self, ctx: commands.Context, exception: Exception):
         if isinstance(exception, commands.CommandNotFound):
             return
         return await ctx.send(f"Error: {exception}")
+
 
 Bot().run(os.environ.get("TOKEN"))
