@@ -1,12 +1,15 @@
 from discord.ext import commands
+from typing import TYPE_CHECKING
 
+if TYPE_CHECKING:
+    from bot import Bot
 
 class Example(commands.Cog):
     """
     예시 Cog 입니다.
     """
 
-    def __init__(self, bot: commands.Bot):
+    def __init__(self, bot: "Bot"):
         self.bot = bot
 
     @commands.command(name="ping")
@@ -14,5 +17,5 @@ class Example(commands.Cog):
         await ctx.send("pong")
 
 
-def setup(bot: commands.Bot):
+def setup(bot: "Bot"):
     bot.add_cog(Example(bot))
